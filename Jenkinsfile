@@ -15,5 +15,15 @@ pipeline {
                 bat "npm ci"
             }
         }
+        stage("Testing") {
+            steps {
+                bat "npm run test"
+            }
+        }
+        stage("Build") {
+            steps {
+                bat "ng build"
+            }
+        }
     }
 }
